@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<title>Ploting</title>
+	<link rel="stylesheet" href="css/design.css" /> 
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+  	<script src="https://mauriciopoppe.github.io/function-plot/js/function-plot.js"></script>
+  	<script src=js/plot.js></script>
+</head>
+<body onload="ploting();">
+	<h1> Learning step By Step </h1>
+	
+	<section class="form">
+		<label for="xMin">xMin value:</label>
+		<input type="number" name="xMin" id="xMin" value="0" step=0.5 oninput="ploting();"></input><br>
+		<label for="xMax">xMax value:</label>
+		<input type="number" name="xMax" id="xMax" value="6.28" step=0.5 oninput="ploting();"></input><br>
+		<label for="yMin">yMin value:</label>
+		<input type="number" name="yMin" id="yMin" value="-1" step=0.5 oninput="ploting();"></input><br>
+		<label for="yMax">yMax value:</label>
+		<input type="number" name="yMax" id="yMax" value="1" step=0.5 oninput="ploting();"></input><br>
+		<hr>
+		<div id="functions">
+			<div id="fn">
+				<label for="func">Fn:</label> 
+				<input type="text" name="func" id="func" value="sin(x)" onchange="ploting();"></input><br>
+				<label for="color">Color:</label><br>
+				<input type="color" name="color" id="color" onchange="ploting();"></input step=0.5><br>
+			</div>			
+		</div>
+		<div>Add Function <button class="btn btn-circle" onclick="addFn();">+</button></div>
+		<hr>
+		<button onclick="ploting();" class="btn btn-def">Plotit Now!</button>
+	</section>
+	<section class="plot">
+		<div id="graph"></div>
+	</section>
+	
+</body>
+</html>

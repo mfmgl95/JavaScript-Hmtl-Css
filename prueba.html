@@ -1,0 +1,19 @@
+<!Doctype HTML!>
+<html lang="es">
+<head>
+	<meta charset="UTF-8"/>
+</head>
+<body>>
+<h1 id="h1_title">Título</h1>
+<button onclick="cambiarTitulo();"> clickeame XD</button>
+<script>
+	function cambiarTitulo(){
+		//document.getElementById("h1_title").innerHTML = "Nuevo titulo";
+		var h1Titulo= document.querySelector("#h1_title");
+		h1Titulo.innerHTML += "New Title";
+		h1Titulo.style.color = "red";
+		h1Titulo.style.border = "1px dashed red";
+	}
+</script>
+</body>
+</html>
