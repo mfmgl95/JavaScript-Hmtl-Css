@@ -10,18 +10,19 @@ var parameters = {
 function addFn(){
 	var divFn = document.createElement('div');
 	divFn.id=fn;
-	divFn.innerHTML="<label for='func'>Fn:</label><button class='btn btn-circle' style='float: right;' onclick='removeFn(this);'>-</button><input type='text' name='func' id='func' value='sin(x)' onchange='ploting();'></input><br><label for='color'>Color:</label><br>	<input type='color' name='color' id='color' onchange='ploting();'></input step=0.5><br>";
+	/*divFn.innerHTML="<label for='func'>Fn:</label><button class='btn btn-circle' style='float: right;' onclick='removeFn(this);'>-</button><input type='text' name='func' id='func' value='sin(x)' onchange='ploting();'></input><br><label for='color'>Color:</label><br>	<input type='color' name='color' id='color' onchange='ploting();'></input step=0.5><br>";*/
+	divFn.innerHTML="<label for='func'>Fn:</label><input type='text' name='func' id='func' value='sin(x)' onchange='ploting();'></input><br><label for='color'>Color:</label><br>	<input type='color' name='color' id='color' onchange='ploting();'></input step=0.5><br>";
 	var containerFunctions = document.querySelector("#functions");
 	containerFunctions.appendChild(divFn);
 
 	ploting();
 }
 
-function removeFn(elemento){
+/*function removeFn(elemento){
 	var divContainerFunctions = (elemento.parentNode).parentNode;
 	divContainerFunctions.removeChild(elemento.parentNode);
 	ploting();
-}
+}*/
 
 function ploting(){
 	var xMin = document.querySelector("#xMin").value;
